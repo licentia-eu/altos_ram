@@ -1,0 +1,26 @@
+CAS & RAS formulas (using C/C++ notation):
+
+O_CAS0 = !(!B13 & B23)
+O_CAS2 = !(!B13 & B23)
+
+O_CAS1 = !(!B13 & B21)
+O_CAS3 = !(!B13 & B21)
+
+O_CAS4 = !(!B13 & B10)
+O_CAS6 = !(!B13 & B10)
+
+O_CAS5 = !(!B13 & B8)
+O_CAS7 = !(!B13 & B8)
+
+
+BANK 0
+O_RAS0 = !(!B19 & B27)
+O_RAS1 = !(!B19 & B27)
+O_RAS6 = !(!B19 & B27)
+O_RAS7 = !(!B19 & B27)
+
+BANK 1
+O_RAS2 = !(!B19 & B26)
+O_RAS3 = !(!B19 & B26)
+O_RAS4 = !(!B19 & B26)
+O_RAS5 = !(!B19 & B26)
