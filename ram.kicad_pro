@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 0.6,
+          "width": 1.325
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -51,8 +51,20 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        "copper_edge_clearance|19500000|127500000|226e934d-8e8a-42e1-a1e6-4a1d97b248f3|e6958ca3-0a0a-4a9a-bdc1-1e30ec0a0913",
+        "starved_thermal|69223820|171756178|ac1a6054-8414-4c0c-96b7-d00fde6b19b3|3e64f648-42d4-4c51-89ee-98bdeb411674|In1.Cu",
+        "starved_thermal|77976180|171756180|ac1a6054-8414-4c0c-96b7-d00fde6b19b3|e05772f4-054d-4d5f-a3f8-d38ed70a5c66|In1.Cu",
+        "starved_thermal|84463820|171756178|ac1a6054-8414-4c0c-96b7-d00fde6b19b3|111c7740-9521-4589-b98b-44b77fbdaf8b|In1.Cu",
+        "starved_thermal|99703820|171756178|ac1a6054-8414-4c0c-96b7-d00fde6b19b3|c0f99b23-f4f0-4275-bb33-fa8b42a60593|In1.Cu"
+      ],
       "meta": {
         "version": 2
       },
@@ -171,7 +183,11 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.25,
+        0.5
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -198,7 +214,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -473,7 +494,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
