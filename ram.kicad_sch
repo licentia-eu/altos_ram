@@ -6448,7 +6448,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 269.24) (xy 205.74 269.24)
+			(xy 236.22 278.13) (xy 238.76 278.13)
 		)
 		(stroke
 			(width 0)
@@ -6498,7 +6498,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 269.24) (xy 256.54 269.24)
+			(xy 287.02 278.13) (xy 289.56 278.13)
 		)
 		(stroke
 			(width 0)
@@ -7168,7 +7168,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 269.24) (xy 220.98 269.24)
+			(xy 251.46 278.13) (xy 254 278.13)
 		)
 		(stroke
 			(width 0)
@@ -7268,7 +7268,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 269.24) (xy 237.49 269.24)
+			(xy 267.97 278.13) (xy 270.51 278.13)
 		)
 		(stroke
 			(width 0)
@@ -7796,10 +7796,10 @@
 		)
 		(uuid "ffdca386-7caa-4ac9-afec-4bb5f13a0e43")
 	)
-	(text_box "CAS & RAS logic (using C/C++ notation):\n\nO_CAS0 = !(!B13 & B23)      BANK 0\nO_CAS2 = !(!B13 & B23)      O_RAS0 = !(!B19 & B27)\n                            O_RAS1 = !(!B19 & B27)\nO_CAS1 = !(!B13 & B21)      O_RAS6 = !(!B19 & B27)\nO_CAS3 = !(!B13 & B21)      O_RAS7 = !(!B19 & B27)\n\nO_CAS4 = !(!B13 & B10)      BANK 1\nO_CAS6 = !(!B13 & B10)      O_RAS2 = !(!B19 & B26)\n                            O_RAS3 = !(!B19 & B26)\nO_CAS5 = !(!B13 & B8)       O_RAS4 = !(!B19 & B26)\nO_CAS7 = !(!B13 & B8)       O_RAS5 = !(!B19 & B26)\n\n\n"
+	(text_box "CAS & RAS logic (using C notation):\n\nBYTE 0\n~{O_CAS0} = !(!~{CAS_OE} & CAS0)\n~{O_CAS2} = !(!~{CAS_OE} & CAS0)\nBYTE 1\n~{O_CAS1} = !(!~{CAS_OE} & CAS1)\n~{O_CAS3} = !(!~{CAS_OE} & CAS1)\nBYTE 2\n~{O_CAS4} = !(!~{CAS_OE} & CAS2)\n~{O_CAS6} = !(!~{CAS_OE} & CAS2)\nBYTE 3\n~{O_CAS5} = !(!~{CAS_OE} & CAS3)\n~{O_CAS7} = !(!~{CAS_OE} & CAS3)\n\nBANK 0\n ~{O_RAS0} = !(!~{RAS_OE} & RAS0)\n ~{O_RAS1} = !(!~{RAS_OE} & RAS0)\n ~{O_RAS6} = !(!~{RAS_OE} & RAS0)\n ~{O_RAS7} = !(!~{RAS_OE} & RAS0)\nBANK 1\n ~{O_RAS2} = !(!~{RAS_OE} & RAS1)\n ~{O_RAS3} = !(!~{RAS_OE} & RAS1)\n ~{O_RAS4} = !(!~{RAS_OE} & RAS1)\n ~{O_RAS5} = !(!~{RAS_OE} & RAS1)\n"
 		(exclude_from_sim no)
-		(at 199.39 228.6 0)
-		(size 55.88 30.48)
+		(at 186.69 220.98 0)
+		(size 39.37 55.88)
 		(stroke
 			(width 0)
 			(type default)
@@ -8020,7 +8020,7 @@
 			)
 		)
 	)
-	(global_label "RAS1"
+	(global_label "~{RAS1}"
 		(shape input)
 		(at 38.1 182.88 180)
 		(fields_autoplaced yes)
@@ -8086,7 +8086,7 @@
 			)
 		)
 	)
-	(global_label "~{B19}"
+	(global_label "RAS_OE"
 		(shape input)
 		(at 194.31 39.37 180)
 		(fields_autoplaced yes)
@@ -8108,7 +8108,7 @@
 			)
 		)
 	)
-	(global_label "~{B19}"
+	(global_label "RAS_OE"
 		(shape input)
 		(at 212.09 85.09 0)
 		(fields_autoplaced yes)
@@ -8130,7 +8130,7 @@
 			)
 		)
 	)
-	(global_label "RAS5"
+	(global_label "~{RAS5}"
 		(shape input)
 		(at 365.76 187.96 180)
 		(fields_autoplaced yes)
@@ -8218,7 +8218,7 @@
 			)
 		)
 	)
-	(global_label "RAS0"
+	(global_label "~{RAS0}"
 		(shape input)
 		(at 22.86 95.25 180)
 		(fields_autoplaced yes)
@@ -8438,7 +8438,7 @@
 			)
 		)
 	)
-	(global_label "B27"
+	(global_label "RAS0"
 		(shape input)
 		(at 194.31 41.91 180)
 		(fields_autoplaced yes)
@@ -8548,7 +8548,7 @@
 			)
 		)
 	)
-	(global_label "B8"
+	(global_label "CAS3"
 		(shape input)
 		(at 212.09 34.29 0)
 		(fields_autoplaced yes)
@@ -8768,7 +8768,7 @@
 			)
 		)
 	)
-	(global_label "RAS6"
+	(global_label "~{RAS6}"
 		(shape input)
 		(at 304.8 77.47 90)
 		(fields_autoplaced yes)
@@ -8790,7 +8790,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS1"
+	(global_label "~{O_CAS1}"
 		(shape input)
 		(at 127 45.72 270)
 		(fields_autoplaced yes)
@@ -9230,7 +9230,7 @@
 			)
 		)
 	)
-	(global_label "CAS4"
+	(global_label "~{CAS4}"
 		(shape input)
 		(at 293.37 177.8 90)
 		(fields_autoplaced yes)
@@ -9274,7 +9274,7 @@
 			)
 		)
 	)
-	(global_label "B10"
+	(global_label "CAS2"
 		(shape input)
 		(at 212.09 74.93 0)
 		(fields_autoplaced yes)
@@ -9362,7 +9362,7 @@
 			)
 		)
 	)
-	(global_label "~{B19}"
+	(global_label "RAS_OE"
 		(shape input)
 		(at 194.31 80.01 180)
 		(fields_autoplaced yes)
@@ -9428,7 +9428,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS0"
+	(global_label "~{O_CAS0}"
 		(shape input)
 		(at 125.73 83.82 270)
 		(fields_autoplaced yes)
@@ -9450,7 +9450,7 @@
 			)
 		)
 	)
-	(global_label "RAS0"
+	(global_label "~{RAS0}"
 		(shape input)
 		(at 116.84 76.2 90)
 		(fields_autoplaced yes)
@@ -9604,7 +9604,7 @@
 			)
 		)
 	)
-	(global_label "RAS4"
+	(global_label "~{RAS4}"
 		(shape input)
 		(at 354.33 97.79 180)
 		(fields_autoplaced yes)
@@ -9648,7 +9648,7 @@
 			)
 		)
 	)
-	(global_label "CAS2"
+	(global_label "~{CAS2}"
 		(shape input)
 		(at 125.73 173.99 90)
 		(fields_autoplaced yes)
@@ -10088,7 +10088,7 @@
 			)
 		)
 	)
-	(global_label "B26"
+	(global_label "RAS1"
 		(shape input)
 		(at 212.09 128.27 0)
 		(fields_autoplaced yes)
@@ -10198,7 +10198,7 @@
 			)
 		)
 	)
-	(global_label "B13"
+	(global_label "~{CAS_OE}"
 		(shape input)
 		(at 68.58 238.76 270)
 		(fields_autoplaced yes)
@@ -10286,7 +10286,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS4"
+	(global_label "~{O_CAS4}"
 		(shape input)
 		(at 293.37 185.42 270)
 		(fields_autoplaced yes)
@@ -10462,7 +10462,7 @@
 			)
 		)
 	)
-	(global_label "B26"
+	(global_label "RAS1"
 		(shape input)
 		(at 194.31 128.27 180)
 		(fields_autoplaced yes)
@@ -10704,7 +10704,7 @@
 			)
 		)
 	)
-	(global_label "RAS2"
+	(global_label "~{RAS2}"
 		(shape input)
 		(at 55.88 96.52 180)
 		(fields_autoplaced yes)
@@ -10814,7 +10814,7 @@
 			)
 		)
 	)
-	(global_label "B27"
+	(global_label "RAS0"
 		(shape input)
 		(at 194.31 82.55 180)
 		(fields_autoplaced yes)
@@ -10902,7 +10902,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS1"
+	(global_label "~{O_CAS1}"
 		(shape input)
 		(at 194.31 36.83 180)
 		(fields_autoplaced yes)
@@ -11056,7 +11056,7 @@
 			)
 		)
 	)
-	(global_label "RAS3"
+	(global_label "~{RAS3}"
 		(shape input)
 		(at 72.39 184.15 180)
 		(fields_autoplaced yes)
@@ -11298,7 +11298,7 @@
 			)
 		)
 	)
-	(global_label "~{B13}"
+	(global_label "CAS_OE"
 		(shape input)
 		(at 212.09 77.47 0)
 		(fields_autoplaced yes)
@@ -11430,7 +11430,7 @@
 			)
 		)
 	)
-	(global_label "~{B13}"
+	(global_label "CAS_OE"
 		(shape input)
 		(at 212.09 177.8 0)
 		(fields_autoplaced yes)
@@ -11474,7 +11474,7 @@
 			)
 		)
 	)
-	(global_label "B26"
+	(global_label "RAS1"
 		(shape input)
 		(at 212.09 182.88 0)
 		(fields_autoplaced yes)
@@ -11562,7 +11562,7 @@
 			)
 		)
 	)
-	(global_label "B19"
+	(global_label "~{RAS_OE}"
 		(shape input)
 		(at 167.64 179.07 0)
 		(fields_autoplaced yes)
@@ -11606,7 +11606,7 @@
 			)
 		)
 	)
-	(global_label "B10"
+	(global_label "CAS2"
 		(shape input)
 		(at 212.09 175.26 0)
 		(fields_autoplaced yes)
@@ -11650,7 +11650,7 @@
 			)
 		)
 	)
-	(global_label "RAS3"
+	(global_label "~{RAS3}"
 		(shape input)
 		(at 116.84 120.65 90)
 		(fields_autoplaced yes)
@@ -11672,7 +11672,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS6"
+	(global_label "~{O_CAS6}"
 		(shape input)
 		(at 212.09 80.01 0)
 		(fields_autoplaced yes)
@@ -11738,7 +11738,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS4"
+	(global_label "~{O_RAS4}"
 		(shape input)
 		(at 212.09 187.96 0)
 		(fields_autoplaced yes)
@@ -11848,7 +11848,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS3"
+	(global_label "~{O_RAS3}"
 		(shape input)
 		(at 194.31 130.81 180)
 		(fields_autoplaced yes)
@@ -11892,7 +11892,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS3"
+	(global_label "~{O_RAS3}"
 		(shape input)
 		(at 116.84 128.27 270)
 		(fields_autoplaced yes)
@@ -11936,7 +11936,7 @@
 			)
 		)
 	)
-	(global_label "RAS6"
+	(global_label "~{RAS6}"
 		(shape input)
 		(at 386.08 96.52 180)
 		(fields_autoplaced yes)
@@ -12024,7 +12024,7 @@
 			)
 		)
 	)
-	(global_label "B23"
+	(global_label "CAS0"
 		(shape input)
 		(at 43.18 238.76 270)
 		(fields_autoplaced yes)
@@ -12046,7 +12046,7 @@
 			)
 		)
 	)
-	(global_label "~{B19}"
+	(global_label "RAS_OE"
 		(shape input)
 		(at 212.09 130.81 0)
 		(fields_autoplaced yes)
@@ -12068,7 +12068,7 @@
 			)
 		)
 	)
-	(global_label "~{B13}"
+	(global_label "CAS_OE"
 		(shape input)
 		(at 167.64 176.53 0)
 		(fields_autoplaced yes)
@@ -12156,7 +12156,7 @@
 			)
 		)
 	)
-	(global_label "~{B19}"
+	(global_label "RAS_OE"
 		(shape input)
 		(at 194.31 180.34 180)
 		(fields_autoplaced yes)
@@ -12508,7 +12508,7 @@
 			)
 		)
 	)
-	(global_label "~{B19}"
+	(global_label "RAS_OE"
 		(shape input)
 		(at 212.09 185.42 0)
 		(fields_autoplaced yes)
@@ -12618,7 +12618,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS5"
+	(global_label "~{O_RAS5}"
 		(shape input)
 		(at 302.26 133.35 270)
 		(fields_autoplaced yes)
@@ -12750,7 +12750,7 @@
 			)
 		)
 	)
-	(global_label "B21"
+	(global_label "CAS1"
 		(shape input)
 		(at 194.31 120.65 180)
 		(fields_autoplaced yes)
@@ -12860,7 +12860,7 @@
 			)
 		)
 	)
-	(global_label "RAS2"
+	(global_label "~{RAS2}"
 		(shape input)
 		(at 116.84 173.99 90)
 		(fields_autoplaced yes)
@@ -13058,7 +13058,7 @@
 			)
 		)
 	)
-	(global_label "CAS7"
+	(global_label "~{CAS7}"
 		(shape input)
 		(at 386.08 124.46 90)
 		(fields_autoplaced yes)
@@ -13080,7 +13080,7 @@
 			)
 		)
 	)
-	(global_label "B8"
+	(global_label "CAS3"
 		(shape input)
 		(at 81.28 238.76 270)
 		(fields_autoplaced yes)
@@ -13168,7 +13168,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS6"
+	(global_label "~{O_RAS6}"
 		(shape input)
 		(at 212.09 87.63 0)
 		(fields_autoplaced yes)
@@ -13234,7 +13234,7 @@
 			)
 		)
 	)
-	(global_label "CAS7"
+	(global_label "~{CAS7}"
 		(shape input)
 		(at 290.83 36.83 90)
 		(fields_autoplaced yes)
@@ -13410,7 +13410,7 @@
 			)
 		)
 	)
-	(global_label "B23"
+	(global_label "CAS0"
 		(shape input)
 		(at 194.31 175.26 180)
 		(fields_autoplaced yes)
@@ -13520,7 +13520,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS7"
+	(global_label "~{O_RAS7}"
 		(shape input)
 		(at 302.26 44.45 270)
 		(fields_autoplaced yes)
@@ -13564,7 +13564,7 @@
 			)
 		)
 	)
-	(global_label "~{B13}"
+	(global_label "CAS_OE"
 		(shape input)
 		(at 194.31 31.75 180)
 		(fields_autoplaced yes)
@@ -13718,7 +13718,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS7"
+	(global_label "~{O_CAS7}"
 		(shape input)
 		(at 290.83 44.45 270)
 		(fields_autoplaced yes)
@@ -13762,7 +13762,7 @@
 			)
 		)
 	)
-	(global_label "B26"
+	(global_label "RAS1"
 		(shape input)
 		(at 35.56 238.76 270)
 		(fields_autoplaced yes)
@@ -13806,7 +13806,7 @@
 			)
 		)
 	)
-	(global_label "B19"
+	(global_label "~{RAS_OE}"
 		(shape input)
 		(at 53.34 238.76 270)
 		(fields_autoplaced yes)
@@ -14004,7 +14004,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS0"
+	(global_label "~{O_RAS0}"
 		(shape input)
 		(at 116.84 83.82 270)
 		(fields_autoplaced yes)
@@ -14070,7 +14070,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS2"
+	(global_label "~{O_RAS2}"
 		(shape input)
 		(at 194.31 185.42 180)
 		(fields_autoplaced yes)
@@ -14092,7 +14092,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS0"
+	(global_label "~{O_CAS0}"
 		(shape input)
 		(at 194.31 77.47 180)
 		(fields_autoplaced yes)
@@ -14180,7 +14180,7 @@
 			)
 		)
 	)
-	(global_label "~{B13}"
+	(global_label "CAS_OE"
 		(shape input)
 		(at 212.09 123.19 0)
 		(fields_autoplaced yes)
@@ -14268,7 +14268,7 @@
 			)
 		)
 	)
-	(global_label "CAS1"
+	(global_label "~{CAS1}"
 		(shape input)
 		(at 29.21 119.38 90)
 		(fields_autoplaced yes)
@@ -14730,7 +14730,7 @@
 			)
 		)
 	)
-	(global_label "B27"
+	(global_label "RAS0"
 		(shape input)
 		(at 33.02 238.76 270)
 		(fields_autoplaced yes)
@@ -14752,7 +14752,7 @@
 			)
 		)
 	)
-	(global_label "RAS7"
+	(global_label "~{RAS7}"
 		(shape input)
 		(at 302.26 36.83 90)
 		(fields_autoplaced yes)
@@ -14884,7 +14884,7 @@
 			)
 		)
 	)
-	(global_label "CAS2"
+	(global_label "~{CAS2}"
 		(shape input)
 		(at 45.72 33.02 90)
 		(fields_autoplaced yes)
@@ -14928,7 +14928,7 @@
 			)
 		)
 	)
-	(global_label "CAS6"
+	(global_label "~{CAS6}"
 		(shape input)
 		(at 375.92 33.02 90)
 		(fields_autoplaced yes)
@@ -14950,7 +14950,7 @@
 			)
 		)
 	)
-	(global_label "RAS5"
+	(global_label "~{RAS5}"
 		(shape input)
 		(at 302.26 125.73 90)
 		(fields_autoplaced yes)
@@ -15082,7 +15082,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS5"
+	(global_label "~{O_CAS5}"
 		(shape input)
 		(at 292.1 133.35 270)
 		(fields_autoplaced yes)
@@ -15126,7 +15126,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS7"
+	(global_label "~{O_CAS7}"
 		(shape input)
 		(at 212.09 39.37 0)
 		(fields_autoplaced yes)
@@ -15214,7 +15214,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS2"
+	(global_label "~{O_CAS2}"
 		(shape input)
 		(at 194.31 177.8 180)
 		(fields_autoplaced yes)
@@ -15368,7 +15368,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS2"
+	(global_label "~{O_CAS2}"
 		(shape input)
 		(at 125.73 181.61 270)
 		(fields_autoplaced yes)
@@ -15390,7 +15390,7 @@
 			)
 		)
 	)
-	(global_label "B21"
+	(global_label "CAS1"
 		(shape input)
 		(at 194.31 34.29 180)
 		(fields_autoplaced yes)
@@ -15434,7 +15434,7 @@
 			)
 		)
 	)
-	(global_label "~{B19}"
+	(global_label "RAS_OE"
 		(shape input)
 		(at 167.64 181.61 0)
 		(fields_autoplaced yes)
@@ -15500,7 +15500,7 @@
 			)
 		)
 	)
-	(global_label "~{B13}"
+	(global_label "CAS_OE"
 		(shape input)
 		(at 194.31 118.11 180)
 		(fields_autoplaced yes)
@@ -15632,7 +15632,7 @@
 			)
 		)
 	)
-	(global_label "~{B13}"
+	(global_label "CAS_OE"
 		(shape input)
 		(at 194.31 172.72 180)
 		(fields_autoplaced yes)
@@ -15676,7 +15676,7 @@
 			)
 		)
 	)
-	(global_label "CAS3"
+	(global_label "~{CAS3}"
 		(shape input)
 		(at 127 120.65 90)
 		(fields_autoplaced yes)
@@ -15764,7 +15764,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS6"
+	(global_label "~{O_RAS6}"
 		(shape input)
 		(at 304.8 85.09 270)
 		(fields_autoplaced yes)
@@ -15852,7 +15852,7 @@
 			)
 		)
 	)
-	(global_label "B10"
+	(global_label "CAS2"
 		(shape input)
 		(at 76.2 238.76 270)
 		(fields_autoplaced yes)
@@ -15962,7 +15962,7 @@
 			)
 		)
 	)
-	(global_label "B27"
+	(global_label "RAS0"
 		(shape input)
 		(at 212.09 82.55 0)
 		(fields_autoplaced yes)
@@ -16160,7 +16160,7 @@
 			)
 		)
 	)
-	(global_label "CAS1"
+	(global_label "~{CAS1}"
 		(shape input)
 		(at 127 38.1 90)
 		(fields_autoplaced yes)
@@ -16226,7 +16226,7 @@
 			)
 		)
 	)
-	(global_label "~{B19}"
+	(global_label "RAS_OE"
 		(shape input)
 		(at 212.09 44.45 0)
 		(fields_autoplaced yes)
@@ -16292,7 +16292,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS1"
+	(global_label "~{O_RAS1}"
 		(shape input)
 		(at 118.11 45.72 270)
 		(fields_autoplaced yes)
@@ -16402,7 +16402,7 @@
 			)
 		)
 	)
-	(global_label "CAS5"
+	(global_label "~{CAS5}"
 		(shape input)
 		(at 292.1 125.73 90)
 		(fields_autoplaced yes)
@@ -16556,7 +16556,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS4"
+	(global_label "~{O_RAS4}"
 		(shape input)
 		(at 303.53 185.42 270)
 		(fields_autoplaced yes)
@@ -17040,7 +17040,7 @@
 			)
 		)
 	)
-	(global_label "~{B13}"
+	(global_label "CAS_OE"
 		(shape input)
 		(at 212.09 36.83 0)
 		(fields_autoplaced yes)
@@ -17108,7 +17108,7 @@
 	)
 	(global_label "B4"
 		(shape input)
-		(at 245.11 269.24 270)
+		(at 278.13 278.13 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -17118,7 +17118,7 @@
 		)
 		(uuid "bc51fafe-7457-44f3-afe9-ee57b2b97c67")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 245.11 274.7047 90)
+			(at 278.13 283.5947 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17524,7 +17524,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS3"
+	(global_label "~{O_CAS3}"
 		(shape input)
 		(at 194.31 123.19 180)
 		(fields_autoplaced yes)
@@ -17744,7 +17744,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS6"
+	(global_label "~{O_CAS6}"
 		(shape input)
 		(at 294.64 85.09 270)
 		(fields_autoplaced yes)
@@ -17766,7 +17766,7 @@
 			)
 		)
 	)
-	(global_label "B27"
+	(global_label "RAS0"
 		(shape input)
 		(at 212.09 41.91 0)
 		(fields_autoplaced yes)
@@ -17788,7 +17788,7 @@
 			)
 		)
 	)
-	(global_label "CAS3"
+	(global_label "~{CAS3}"
 		(shape input)
 		(at 62.23 120.65 90)
 		(fields_autoplaced yes)
@@ -17942,7 +17942,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS5"
+	(global_label "~{O_RAS5}"
 		(shape input)
 		(at 212.09 133.35 0)
 		(fields_autoplaced yes)
@@ -17986,7 +17986,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS3"
+	(global_label "~{O_CAS3}"
 		(shape input)
 		(at 127 128.27 270)
 		(fields_autoplaced yes)
@@ -18030,7 +18030,7 @@
 			)
 		)
 	)
-	(global_label "CAS0"
+	(global_label "~{CAS0}"
 		(shape input)
 		(at 13.97 31.75 90)
 		(fields_autoplaced yes)
@@ -18052,7 +18052,7 @@
 			)
 		)
 	)
-	(global_label "CAS0"
+	(global_label "~{CAS0}"
 		(shape input)
 		(at 125.73 76.2 90)
 		(fields_autoplaced yes)
@@ -18074,7 +18074,7 @@
 			)
 		)
 	)
-	(global_label "B26"
+	(global_label "RAS1"
 		(shape input)
 		(at 194.31 182.88 180)
 		(fields_autoplaced yes)
@@ -18098,7 +18098,7 @@
 	)
 	(global_label "B3"
 		(shape input)
-		(at 264.16 269.24 270)
+		(at 297.18 278.13 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -18108,7 +18108,7 @@
 		)
 		(uuid "d41478ca-d810-417e-ad7e-73c787511aa4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 264.16 274.7047 90)
+			(at 297.18 283.5947 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18140,7 +18140,7 @@
 			)
 		)
 	)
-	(global_label "~{B13}"
+	(global_label "CAS_OE"
 		(shape input)
 		(at 194.31 72.39 180)
 		(fields_autoplaced yes)
@@ -18206,7 +18206,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS1"
+	(global_label "~{O_RAS1}"
 		(shape input)
 		(at 194.31 44.45 180)
 		(fields_autoplaced yes)
@@ -18426,7 +18426,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS0"
+	(global_label "~{O_RAS0}"
 		(shape input)
 		(at 194.31 85.09 180)
 		(fields_autoplaced yes)
@@ -18514,7 +18514,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS4"
+	(global_label "~{O_CAS4}"
 		(shape input)
 		(at 212.09 180.34 0)
 		(fields_autoplaced yes)
@@ -18756,7 +18756,7 @@
 			)
 		)
 	)
-	(global_label "B8"
+	(global_label "CAS3"
 		(shape input)
 		(at 212.09 120.65 0)
 		(fields_autoplaced yes)
@@ -18800,7 +18800,7 @@
 			)
 		)
 	)
-	(global_label "CAS5"
+	(global_label "~{CAS5}"
 		(shape input)
 		(at 355.6 124.46 90)
 		(fields_autoplaced yes)
@@ -18910,7 +18910,7 @@
 			)
 		)
 	)
-	(global_label "RAS4"
+	(global_label "~{RAS4}"
 		(shape input)
 		(at 303.53 177.8 90)
 		(fields_autoplaced yes)
@@ -18934,7 +18934,7 @@
 	)
 	(global_label "B6"
 		(shape input)
-		(at 228.6 269.24 270)
+		(at 261.62 278.13 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -18944,7 +18944,7 @@
 		)
 		(uuid "e7fd3093-49c3-4ef8-bc64-b432ae3bd3ed")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.6 274.7047 90)
+			(at 261.62 283.5947 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19042,7 +19042,7 @@
 			)
 		)
 	)
-	(global_label "O_CAS5"
+	(global_label "~{O_CAS5}"
 		(shape input)
 		(at 212.09 125.73 0)
 		(fields_autoplaced yes)
@@ -19086,7 +19086,7 @@
 			)
 		)
 	)
-	(global_label "~{B19}"
+	(global_label "RAS_OE"
 		(shape input)
 		(at 194.31 125.73 180)
 		(fields_autoplaced yes)
@@ -19108,7 +19108,7 @@
 			)
 		)
 	)
-	(global_label "B21"
+	(global_label "CAS1"
 		(shape input)
 		(at 48.26 238.76 270)
 		(fields_autoplaced yes)
@@ -19218,7 +19218,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS7"
+	(global_label "~{O_RAS7}"
 		(shape input)
 		(at 212.09 46.99 0)
 		(fields_autoplaced yes)
@@ -19264,7 +19264,7 @@
 	)
 	(global_label "B2"
 		(shape input)
-		(at 213.36 269.24 270)
+		(at 246.38 278.13 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -19274,7 +19274,7 @@
 		)
 		(uuid "efeac132-595f-40fe-80d4-ed804c1762af")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.36 274.7047 90)
+			(at 246.38 283.5947 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19394,7 +19394,7 @@
 			)
 		)
 	)
-	(global_label "CAS4"
+	(global_label "~{CAS4}"
 		(shape input)
 		(at 344.17 34.29 90)
 		(fields_autoplaced yes)
@@ -19416,7 +19416,7 @@
 			)
 		)
 	)
-	(global_label "B13"
+	(global_label "~{CAS_OE}"
 		(shape input)
 		(at 167.64 173.99 0)
 		(fields_autoplaced yes)
@@ -19504,7 +19504,7 @@
 			)
 		)
 	)
-	(global_label "O_RAS2"
+	(global_label "~{O_RAS2}"
 		(shape input)
 		(at 116.84 181.61 270)
 		(fields_autoplaced yes)
@@ -19526,7 +19526,7 @@
 			)
 		)
 	)
-	(global_label "RAS7"
+	(global_label "~{RAS7}"
 		(shape input)
 		(at 396.24 187.96 180)
 		(fields_autoplaced yes)
@@ -19548,7 +19548,7 @@
 			)
 		)
 	)
-	(global_label "CAS6"
+	(global_label "~{CAS6}"
 		(shape input)
 		(at 294.64 77.47 90)
 		(fields_autoplaced yes)
@@ -19592,7 +19592,7 @@
 			)
 		)
 	)
-	(global_label "B23"
+	(global_label "CAS0"
 		(shape input)
 		(at 194.31 74.93 180)
 		(fields_autoplaced yes)
@@ -19658,7 +19658,7 @@
 			)
 		)
 	)
-	(global_label "RAS1"
+	(global_label "~{RAS1}"
 		(shape input)
 		(at 118.11 38.1 90)
 		(fields_autoplaced yes)
@@ -21846,7 +21846,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 224.79 269.24 90)
+		(at 257.81 278.13 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21855,7 +21855,7 @@
 		(fields_autoplaced yes)
 		(uuid "17cb1d6d-fa1e-4ef9-bc59-7b3e8cd2ecbe")
 		(property "Reference" "R22"
-			(at 224.79 262.89 90)
+			(at 257.81 271.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21863,7 +21863,7 @@
 			)
 		)
 		(property "Value" "27"
-			(at 224.79 265.43 90)
+			(at 257.81 274.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21871,7 +21871,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 224.79 271.018 90)
+			(at 257.81 279.908 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21880,7 +21880,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 224.79 269.24 0)
+			(at 257.81 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21889,7 +21889,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 224.79 269.24 0)
+			(at 257.81 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24300,7 +24300,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 260.35 269.24 90)
+		(at 293.37 278.13 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -24309,7 +24309,7 @@
 		(fields_autoplaced yes)
 		(uuid "3a305512-982e-48ed-a8a9-ec159199a01b")
 		(property "Reference" "R24"
-			(at 260.35 262.89 90)
+			(at 293.37 271.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24317,7 +24317,7 @@
 			)
 		)
 		(property "Value" "27"
-			(at 260.35 265.43 90)
+			(at 293.37 274.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24325,7 +24325,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.35 271.018 90)
+			(at 293.37 279.908 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24334,7 +24334,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 260.35 269.24 0)
+			(at 293.37 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24343,7 +24343,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 260.35 269.24 0)
+			(at 293.37 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25193,7 +25193,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 241.3 269.24 90)
+		(at 274.32 278.13 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25202,7 +25202,7 @@
 		(fields_autoplaced yes)
 		(uuid "3f40689d-f533-4b55-9d77-13454f58317f")
 		(property "Reference" "R23"
-			(at 241.3 262.89 90)
+			(at 274.32 271.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25210,7 +25210,7 @@
 			)
 		)
 		(property "Value" "27"
-			(at 241.3 265.43 90)
+			(at 274.32 274.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25218,7 +25218,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 241.3 271.018 90)
+			(at 274.32 279.908 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25227,7 +25227,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 241.3 269.24 0)
+			(at 274.32 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25236,7 +25236,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 241.3 269.24 0)
+			(at 274.32 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25649,7 +25649,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 218.44 269.24 0)
+		(at 251.46 278.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25658,7 +25658,7 @@
 		(fields_autoplaced yes)
 		(uuid "468bd1ae-dea9-48cd-b706-95eee8ec68a2")
 		(property "Reference" "#PWR096"
-			(at 218.44 275.59 0)
+			(at 251.46 284.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25667,7 +25667,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 218.44 274.32 0)
+			(at 251.46 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25675,7 +25675,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 218.44 269.24 0)
+			(at 251.46 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25684,7 +25684,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 218.44 269.24 0)
+			(at 251.46 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25693,7 +25693,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 218.44 269.24 0)
+			(at 251.46 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29955,7 +29955,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 209.55 269.24 90)
+		(at 242.57 278.13 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -29964,7 +29964,7 @@
 		(fields_autoplaced yes)
 		(uuid "9b781353-f2c8-4695-bbd6-cb47e5ff7a9a")
 		(property "Reference" "R21"
-			(at 209.55 262.89 90)
+			(at 242.57 271.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29972,7 +29972,7 @@
 			)
 		)
 		(property "Value" "27"
-			(at 209.55 265.43 90)
+			(at 242.57 274.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29980,7 +29980,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 209.55 271.018 90)
+			(at 242.57 279.908 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29989,7 +29989,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 209.55 269.24 0)
+			(at 242.57 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29998,7 +29998,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 209.55 269.24 0)
+			(at 242.57 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31768,7 +31768,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 234.95 269.24 0)
+		(at 267.97 278.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -31777,7 +31777,7 @@
 		(fields_autoplaced yes)
 		(uuid "b8fce269-c933-4586-833b-8cac3cdb249f")
 		(property "Reference" "#PWR097"
-			(at 234.95 275.59 0)
+			(at 267.97 284.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31786,7 +31786,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 234.95 274.32 0)
+			(at 267.97 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31794,7 +31794,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 234.95 269.24 0)
+			(at 267.97 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31803,7 +31803,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 234.95 269.24 0)
+			(at 267.97 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31812,7 +31812,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 234.95 269.24 0)
+			(at 267.97 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33393,7 +33393,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 254 269.24 0)
+		(at 287.02 278.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -33402,7 +33402,7 @@
 		(fields_autoplaced yes)
 		(uuid "d4cf20bd-485c-475a-9b11-578e2daa857f")
 		(property "Reference" "#PWR098"
-			(at 254 275.59 0)
+			(at 287.02 284.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33411,7 +33411,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 254 274.32 0)
+			(at 287.02 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33419,7 +33419,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 254 269.24 0)
+			(at 287.02 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33428,7 +33428,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 269.24 0)
+			(at 287.02 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33437,7 +33437,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 254 269.24 0)
+			(at 287.02 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34330,7 +34330,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 203.2 269.24 0)
+		(at 236.22 278.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -34339,7 +34339,7 @@
 		(fields_autoplaced yes)
 		(uuid "df0411c7-1edd-436d-924e-d43236263633")
 		(property "Reference" "#PWR095"
-			(at 203.2 275.59 0)
+			(at 236.22 284.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34348,7 +34348,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 203.2 274.32 0)
+			(at 236.22 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34356,7 +34356,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 203.2 269.24 0)
+			(at 236.22 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34365,7 +34365,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 269.24 0)
+			(at 236.22 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34374,7 +34374,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 203.2 269.24 0)
+			(at 236.22 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
