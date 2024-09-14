@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 0.6,
+          "width": 1.325
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -51,8 +51,16 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        "shorting_items|24975000|175672000|0e8ec964-72ea-47b4-a7d3-44c2900a4a2c|f276e5d5-b346-49ec-ba30-7ba0d7278e72"
+      ],
       "meta": {
         "version": 2
       },
@@ -171,7 +179,11 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.25,
+        0.5
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -198,7 +210,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -216,14 +233,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      "pin_to_pin|228600|927100|24ca705a-5ac6-464f-9479-4bf11dee2f36|85376a29-719c-4874-af8b-a957ce35501d|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|/97db9db7-dcb2-41a1-990d-fa9c47eb8645",
-      "pin_to_pin|3543300|952500|2fd1e79e-e6a4-48bd-ad4a-16edc431ccf0|7cbd91d1-4133-44df-b506-8a78982ad2a9|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|/97db9db7-dcb2-41a1-990d-fa9c47eb8645",
-      "pin_to_pin|3657600|1854200|03f9a494-1b57-4fa2-88ca-5e2b4e52981a|99e03311-3d55-407f-bdea-b4377a33633f|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|/97db9db7-dcb2-41a1-990d-fa9c47eb8645",
-      "pin_to_pin|381000|1803400|c0c57bf4-fd2a-49db-9134-c2f6b4804c8a|a456de2f-ea6c-487b-b04d-aac1e25599c4|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|/97db9db7-dcb2-41a1-990d-fa9c47eb8645",
-      "power_pin_not_driven|1295400|2222500|7c278c2b-abc8-465d-a5ba-b9160942b185|00000000-0000-0000-0000-000000000000|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|",
-      "power_pin_not_driven|1841500|1993900|743c5e7d-9783-464e-b4d3-b0849628a354|00000000-0000-0000-0000-000000000000|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|/97db9db7-dcb2-41a1-990d-fa9c47eb8645|"
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -584,7 +594,7 @@
   "sheets": [
     [
       "97db9db7-dcb2-41a1-990d-fa9c47eb8645",
-      "Rădăcină"
+      "Root"
     ]
   ],
   "text_variables": {}
