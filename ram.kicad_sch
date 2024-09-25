@@ -543,23 +543,25 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at 3.81 -12.7 90)
+			(property "Reference" "J1"
+				(at 39.37 0.0001 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" ""
-				(at 3.81 -12.7 90)
+			(property "Value" "~"
+				(at 39.37 -1.905 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Sockets:DIN41612_R_3x32_Male_Horizontal_THT"
 				(at 3.81 -12.7 90)
 				(effects
 					(font
@@ -2828,7 +2830,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin power_in line
 					(at 36.83 17.78 90)
 					(length 3.81)
 					(name "Pin_c1"

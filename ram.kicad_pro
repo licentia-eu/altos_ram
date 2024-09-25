@@ -38,8 +38,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 0.6,
-          "width": 1.325
+          "height": 2.7,
+          "width": 1.15
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.3
         }
       },
       "diff_pair_dimensions": [
@@ -59,7 +59,7 @@
         }
       ],
       "drc_exclusions": [
-        "shorting_items|24975000|175672000|0e8ec964-72ea-47b4-a7d3-44c2900a4a2c|f276e5d5-b346-49ec-ba30-7ba0d7278e72"
+        "lib_footprint_mismatch|77655000|149135000|53101040-d84f-4e35-9bfc-1774f435c660|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
         "version": 2
@@ -120,7 +120,7 @@
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.5,
+        "min_copper_edge_clearance": 0.3,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
@@ -181,6 +181,7 @@
       ],
       "track_widths": [
         0.0,
+        0.15,
         0.25,
         0.5
       ],
@@ -483,7 +484,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
