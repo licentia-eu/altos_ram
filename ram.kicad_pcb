@@ -441,7 +441,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "0.1uF"
 			(at 0 2.3 0)
 			(layer "F.Fab")
 			(uuid "b7b95cef-efa1-46d8-a1a5-ad9d2d40935b")
@@ -867,7 +867,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "0.1uF"
 			(at 0 2.3 90)
 			(layer "F.Fab")
 			(uuid "e6d583ba-076f-46f3-b252-6726d6281378")
@@ -1081,7 +1081,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "74AHCT3G04DC"
 			(at 0 2.55 0)
 			(layer "F.Fab")
 			(uuid "aaadc2aa-8f7e-47a3-b304-bd124b656268")
@@ -1118,7 +1118,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "74AHCT3G04DC"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1127,6 +1127,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C7622"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "177de6e9-1e08-4ae6-bcd9-e39a270e923b")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -1410,7 +1423,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "SN74AHCT00DR"
 			(at 0 4.2 0)
 			(layer "F.Fab")
 			(uuid "ca43b0da-e8ab-45b3-9f25-d965be832350")
@@ -1447,7 +1460,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SN74AHCT00DR"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1456,6 +1469,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C155451"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "288c97c8-7524-487b-aa7d-032ff7f464e7")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -1792,7 +1818,7 @@
 				)
 			)
 		)
-		(property "Value" "74AHCT1G00"
+		(property "Value" "SN74AHCT1G00DBVR"
 			(at 0 2.4 0)
 			(layer "F.Fab")
 			(uuid "c74e8f00-b4ee-445f-b5f1-a3ea49ddb4b8")
@@ -1838,6 +1864,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C473380"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d0e94152-58e2-469c-a2f5-daeb01432fcf")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -3567,7 +3606,7 @@
 			(remove_unused_layers no)
 			(net 1 "VCC")
 			(pinfunction "Pin_c1")
-			(pintype "passive")
+			(pintype "power_in")
 			(uuid "daa67de6-3492-4d50-a34d-41ebb53f248d")
 		)
 		(pad "c2" thru_hole circle
@@ -3940,7 +3979,7 @@
 				)
 			)
 		)
-		(property "Value" "74AHCT1G00"
+		(property "Value" "SN74AHCT1G00DBVR"
 			(at 0 2.4 0)
 			(layer "F.Fab")
 			(uuid "90b40ec0-1448-47ff-82dc-68b703ca36b9")
@@ -3986,6 +4025,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C473380"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4cd4d122-84c2-4cb7-b951-a535a5d9f6c2")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
